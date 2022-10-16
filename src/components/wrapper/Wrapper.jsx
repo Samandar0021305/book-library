@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import "./wrapper.scss";
-
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 function Wrapper(){
     const [booksEl , setBook] = useState([])
@@ -34,8 +34,13 @@ function Wrapper(){
                         <li  key={index}>
                             <img src={Element.image} alt="" />
                             <h2>{Element.title}</h2>
-                           <p>{Element.price}</p>
-                           <a href=""></a>
+                           <p>price : {Element.price}</p>
+                       <div>
+                       <span className="wrapper__shopping">
+                            <AddShoppingCartIcon />
+                            <h6>add to book</h6>
+                        </span>
+                       </div>
                         </li>
                     )
                   })
