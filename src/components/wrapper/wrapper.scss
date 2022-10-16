@@ -1,14 +1,28 @@
 .wrapper{
     min-height: 100vh;
     background-color: red;
+    padding: 20px 0;
+    &__rec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__list{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
+        list-style: none;
         & li{
-            width: 250px;
-            height: 100px;
+            width: 350px;
+            min-height: 250px;
+            background-color: white;
+            margin: 20px 20px;
+            & img{
+                height: 70%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
    &__box{

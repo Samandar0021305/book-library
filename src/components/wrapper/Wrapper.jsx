@@ -26,13 +26,15 @@ function Wrapper(){
               <div className="container wrapper__box" >
               <input type="text" onKeyPress={handle} />
               </div>
-             <div className="container">
+             <div className="container wrapper__rec">
              <ul className="wrapper__list">
                 {
                   booksEl.map((Element,index)=>{
                     return(
-                        <li key={index}>
-                            {Element.title}
+                        <li  key={index}>
+                            <img src={Element.image} alt="" />
+                            <h2>{Element.title}</h2>
+                           <p>{Element.price}</p>
                         </li>
                     )
                   })
