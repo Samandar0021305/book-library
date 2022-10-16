@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./wrapper.scss";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -6,9 +5,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 function Wrapper(){
     const [booksEl , setBook] = useState([])
 
-    
- const handle =(e)=>{
-     if(e.key == "Enter"){
+    const handle =(e)=>{
+      if(e.key == "Enter"){
         let res = e.target.value
             fetch(`https://api.itbook.store/1.0/search/${res}`)
             .then(response => response.json())
@@ -20,7 +18,6 @@ function Wrapper(){
     
      }
  }
-
     return(
         <div className="wrapper">
               <div className="container wrapper__box" >
@@ -28,7 +25,7 @@ function Wrapper(){
               </div>
              <div className="container wrapper__rec">
              <ul className="wrapper__list">
-                {
+                {true && 
                   booksEl.map((Element,index)=>{
                     return(
                         <li  key={index}>
