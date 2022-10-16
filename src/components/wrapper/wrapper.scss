@@ -1,6 +1,7 @@
 .wrapper{
+    box-sizing: border-box;
     min-height: 100vh;
-    background-color: red;
+    background-color: #262626;
     padding: 20px 0;
     &__rec{
         display: flex;
@@ -12,10 +13,28 @@
         flex-wrap: wrap;
         list-style: none;
         & li{
+
             width: 350px;
             min-height: 250px;
             background-color: white;
             margin: 20px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 10px;    
+            margin-top: 10px;
+            transition: 0.3s;
+            &:hover{
+                background-color: rgba(202, 127, 127, 0.432);
+            }
+            & p{
+                font-size: 20px;
+                // margin-top: 20px;
+                margin: 20px 20px;
+                opacity: 0.7;
+            }
+            & h2{
+                text-align: center;
+                margin: 5px 15px;
+            }
             & img{
                 height: 70%;
                 width: 100%;
@@ -31,10 +50,14 @@
     align-items: center;
     padding: 20px 0;
     & input{
+        width: 250px;
         border: none;
-        width: 300px;
-        height: 50px;
-        border-radius: 16px 0 16px 0;
+        padding: 6px;
+       margin-bottom: 10px;   
+        border-radius: 10px;
+        &:hover{
+            border: none;
+        }
         &:focus{
             outline: none;
         }
@@ -42,3 +65,16 @@
    }
 }
 
+@media (max-width:400px){
+    .wrapper{
+        &__list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & li{
+                width: 80%;
+            }
+        }
+    }
+}
