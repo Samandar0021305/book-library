@@ -1,0 +1,30 @@
+.wrapper{
+    min-height: 100vh;
+    background-color: red;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        & li{
+            width: 250px;
+            height: 100px;
+        }
+    }
+   &__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    & input{
+        border: none;
+        width: 300px;
+        height: 50px;
+        border-radius: 16px 0 16px 0;
+        &:focus{
+            outline: none;
+        }
+    }
+   }
+}
+
